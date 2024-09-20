@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: url(image/bg.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.box, .boxE, .boxF {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: width 0.5s, height 0.5s;
+    cursor: default;
+}
+
+.box:hover {
+    width: 200px;
+    height: 500px;
+    background-color: red;
+}
+
+.boxE:hover {
+    width: 200px;
+    height: 500px;
+    background-color: black;
+}
+
+.boxF:hover {
+    width: 200px;
+    height: 500px;
+    background-color: yellow;
+}
+
+.signature {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+}
+
+.info {
+    opacity: 0;
+    font-size: 1rem;
+    color: white;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+}
+
+.box:hover .info {
+    opacity: 1;
+}
+
+.box:hover .signature {
+    opacity: 0;
+}
